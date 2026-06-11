@@ -10,24 +10,48 @@
         max-width: 800px;
         margin: 0 auto; 
         padding: 40px 20px; 
-        /* Linear gradient creating three equal vertical stripes */
+        /* Three equal vertical stripes for the Mexican flag background */
         background: linear-gradient(to right, #006847 33.33%, #FFFFFF 33.33%, #FFFFFF 66.66%, #CE1126 66.66%);
         background-attachment: fixed;
+        position: relative;
       }
-      /* Added a container class to keep the text highly readable over the green and red stripes */
+      
+      /* New centered, semi-transparent Mexican Coat of Arms (Eagle) background element */
+      body::before {
+        content: "";
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 320px;
+        height: 320px;
+        /* Using a transparent, high-visibility vector of the Mexican Coat of Arms */
+        background-image: url('https://wikimedia.org');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        opacity: 0.18; /* High enough to be clearly visible, low enough to preserve readability */
+        z-index: 0;
+        pointer-events: none; /* Allows users to still click text or links through the image */
+      }
+
+      /* Container holding text, shifted to z-index 1 to sit clearly on top of the eagle */
       .content-container {
-        background: rgba(255, 255, 255, 0.95);
+        position: relative;
+        z-index: 1;
+        background: rgba(255, 255, 255, 0.92);
         padding: 30px;
         border-radius: 8px;
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       }
-      h1   { color: #1F4E79; margin-top: 0; }
-      h2   { color: #2E75B6; border-bottom: 2px solid #2E75B6; }
+      h1   { color: #006847; margin-top: 0; } /* Changed header to Mexican Green */
+      h2   { color: #CE1126; border-bottom: 2px solid #CE1126; } /* Changed subheaders to Mexican Red */
       p    { line-height: 1.6; color: #333333; }
+      a    { color: #006847; font-weight: bold; }
+      a:hover { color: #CE1126; }
     </style>
   </head>
   <body>
-    <!-- Wrap contents in a container to ensure contrast against the flag background -->
     <div class="content-container">
       <h1>Hi, I'm Jonathan Cabrera!</h1>
    
