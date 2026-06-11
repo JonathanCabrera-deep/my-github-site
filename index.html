@@ -5,29 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jonathan's Website</title>
     <style>
-      body { font-family: Arial, sans-serif; max-width: 800px;
-             margin: 0 auto; padding: 20px; background: #f5f5f5; }
-      h1   { color: #1F4E79; }
+      body { 
+        font-family: Arial, sans-serif; 
+        max-width: 800px;
+        margin: 0 auto; 
+        padding: 40px 20px; 
+        /* Linear gradient creating three equal vertical stripes */
+        background: linear-gradient(to right, #006847 33.33%, #FFFFFF 33.33%, #FFFFFF 66.66%, #CE1126 66.66%);
+        background-attachment: fixed;
+      }
+      /* Added a container class to keep the text highly readable over the green and red stripes */
+      .content-container {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      }
+      h1   { color: #1F4E79; margin-top: 0; }
       h2   { color: #2E75B6; border-bottom: 2px solid #2E75B6; }
-      p    { line-height: 1.6; }
+      p    { line-height: 1.6; color: #333333; }
     </style>
   </head>
   <body>
-    <h1>Hi, I'm Jonathan Cabrera!</h1>
- 
-    <h2>About Me</h2>
-    <p>[Write 2-3 sentences about yourself here.]</p>
- 
-    <h2>My Interests</h2>
-    <p>[What do you enjoy? List a few things.]</p>
- 
-    <h2>My Goals for This Course</h2>
-    <p>[What do you want to build or learn?]</p>
- 
-    <h2>My GitHub</h2>
-    <p>Check out my projects: 
-      <a href="https://github.com/JonathanCabrera-deep">GITHUB LINK</a>
-    </p>
+    <!-- Wrap contents in a container to ensure contrast against the flag background -->
+    <div class="content-container">
+      <h1>Hi, I'm Jonathan Cabrera!</h1>
+   
+      <h2>About Me</h2>
+      <p>I am an aspiring web developer currently exploring frontend technologies and learning how to build clean, functional user interfaces. I love learning new tools and figuring out how web applications work behind the scenes.</p>
+   
+      <h2>My Interests</h2>
+      <p>Outside of coding, I am passionate about technology trends, reading science fiction, and hiking. I also enjoy contributing to open-source software projects in my spare time.</p>
+   
+      <h2>My Goals for This Course</h2>
+      <p>During this course, I want to master HTML structure and advanced CSS styling. Ultimately, my goal is to build fully responsive web layouts from scratch and push them live onto the web.</p>
+   
+      <h2>My GitHub</h2>
+      <p>Check out my projects: 
+        <a href="https://github.com">GITHUB LINK</a>
+      </p>
+    </div>
   </body>
 </html>
-
