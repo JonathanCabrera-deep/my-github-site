@@ -16,7 +16,7 @@
         position: relative;
       }
       
-      /* New centered, semi-transparent Mexican Coat of Arms (Eagle) background element */
+      /* Centered, semi-transparent Mexican Coat of Arms (Eagle) background element */
       body::before {
         content: "";
         position: fixed;
@@ -25,17 +25,16 @@
         transform: translate(-50%, -50%);
         width: 320px;
         height: 320px;
-        /* Using a transparent, high-visibility vector of the Mexican Coat of Arms */
         background-image: url('https://wikimedia.org');
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        opacity: 0.18; /* High enough to be clearly visible, low enough to preserve readability */
+        opacity: 0.18; 
         z-index: 0;
-        pointer-events: none; /* Allows users to still click text or links through the image */
+        pointer-events: none; 
       }
 
-      /* Container holding text, shifted to z-index 1 to sit clearly on top of the eagle */
+      /* Container holding text, sitting clearly on top of the eagle */
       .content-container {
         position: relative;
         z-index: 1;
@@ -44,11 +43,23 @@
         border-radius: 8px;
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       }
-      h1   { color: #006847; margin-top: 0; } /* Changed header to Mexican Green */
-      h2   { color: #CE1126; border-bottom: 2px solid #CE1126; } /* Changed subheaders to Mexican Red */
+      h1   { color: #006847; margin-top: 0; } 
+      h2   { color: #CE1126; border-bottom: 2px solid #CE1126; } 
       p    { line-height: 1.6; color: #333333; }
       a    { color: #006847; font-weight: bold; }
       a:hover { color: #CE1126; }
+
+      /* Styling for the embedded Code.org App Lab iframe wrapper */
+      .app-wrapper {
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+      }
+      iframe {
+        border: 2px solid #333333;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      }
     </style>
   </head>
   <body>
@@ -64,6 +75,13 @@
       <h2>My Goals for This Course</h2>
       <p>During this course, I want to master HTML structure and advanced CSS styling. Ultimately, my goal is to build fully responsive web layouts from scratch and push them live onto the web.</p>
    
+      <h2>My Projects</h2>
+      <p>Check out my custom App Lab project running live below:</p>
+      <!-- Embedded Code.org App Lab Project Window -->
+      <div class="app-wrapper">
+        <iframe src="https://code.org" width="352" height="620" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+      </div>
+
       <h2>My GitHub</h2>
       <p>Check out my projects: 
         <a href="https://github.com">GITHUB LINK</a>
